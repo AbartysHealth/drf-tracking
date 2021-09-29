@@ -160,6 +160,8 @@ class BaseLoggingMixin(object):
             data = data.decode(errors='replace')
             if 'Generated PDF document' in data:
                 data = 'A PDF report was generated of a lab result'
+            else:
+                data = 'A bytes object was sent as a response'
 
         if isinstance(data, list):
             return [self._clean_data(d) for d in data]
