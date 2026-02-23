@@ -9,7 +9,7 @@ from django.utils.timezone import now
 logger = logging.getLogger(__name__)
 
 
-class BaseLoggingMixin(object):
+class BaseLoggingMixin:
     """Mixin to log requests"""
 
     CLEANED_SUBSTITUTE = '********************'
